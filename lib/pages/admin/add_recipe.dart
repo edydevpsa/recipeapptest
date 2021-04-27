@@ -74,7 +74,7 @@ class _MyAddPageState extends State<MyAddPage> {
     });*/
   }
 
-  Future getImage(){
+  getImage(){
 
     AlertDialog alerta = new AlertDialog(
       content: Text('Selecione de donde desea carturar la imagen'),
