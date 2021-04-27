@@ -5,6 +5,8 @@ import 'package:recipesapp/auth/auth.dart';
 import 'package:recipesapp/model/recipe_model.dart';
 import 'package:recipesapp/pages/admin/add_recipe.dart';
 
+import 'edit_recipe.dart';
+
 class CommonThings {
   static Size size; //Size Screen
 }
@@ -111,13 +113,13 @@ class _InicioPageState extends State<InicioPage> {
                                 image: document['image'].toString(),
                                 recipe: document['recipe'].toString(),
                               );
-                              /*Navigator.push(context, MaterialPageRoute(
+                              Navigator.push(context, MaterialPageRoute(
                                 builder: (context) => EditRecipe(
                                   recipe: recipe,
                                   idRecipe: document.documentID,
                                   uid: userID,
                                 ),
-                              ));*/
+                              ));
                             },
                           ),
                         ),
