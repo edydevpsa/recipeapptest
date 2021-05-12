@@ -24,8 +24,8 @@ enum SelectSource{camara, galeria}
 class _ViewRecipeState extends State<ViewRecipe> {
 
   final formkey = GlobalKey<FormState>();
-  String _name;
-  String _recipe;
+  String name;
+  String recipe;
   File _image;
   String urlFoto = '';
   Auth auth = Auth();
@@ -44,8 +44,8 @@ class _ViewRecipeState extends State<ViewRecipe> {
   @override
   void initState() {
     setState(() {
-      this._name = widget.recipe.name;
-      this._recipe = widget.recipe.recipe;
+      this.name = widget.recipe.name;
+      this.recipe = widget.recipe.recipe;
 
       captureImage(null, widget.recipe.image);
     });
@@ -187,10 +187,10 @@ class _ViewRecipeState extends State<ViewRecipe> {
                 TextFormField(
                   enabled: true,
                   keyboardType: TextInputType.text,
-                  initialValue: _name,
+                  initialValue: name,
                   decoration: InputDecoration( labelText: 'Name'),
                   validator: (value) => value.isEmpty ? 'El campo nombre esta vacio': null,
-                  onSaved: (value) => _recipe = value.trim(),
+                  onSaved: (value) => recipe = value.trim(),
                 ),
                 Padding(padding: EdgeInsets.only(top: 50.0)),
               ],
