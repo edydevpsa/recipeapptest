@@ -18,22 +18,18 @@ class ContentPage implements Content{
   Future<HomePageRecipes>lista()async{
     return HomePageRecipes();
   }
-
-  /*Future<MapsPage>mapa()async{
-    return MapsPage();
-  }*/
-
+  
   Future<InicioPage>admin()async{
     return InicioPage();
   }
 
   Future<InicioPage>recetas(String id)async{
-    print('content page $id');
+    print('Content page $id');
     return InicioPage(id: id);
   }
 
   Future<ListMyRecipe>myrecipe(String id)async{
-    print('listado mis recetas $id');
+    print('listando mis recetas $id');
     return ListMyRecipe(id: id);
   }
 
