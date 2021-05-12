@@ -5,6 +5,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart' as img;
+import 'package:image_picker/image_picker.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:recipesapp/auth/auth.dart';
@@ -257,7 +258,7 @@ class _EditRecipeState extends State<EditRecipe> {
       ),
       bottomNavigationBar: BottomAppBar(
         elevation: 20.0,
-        color: Colors.blue,
+        color: Colors.pinkAccent,
         child: ButtonBar(),
       ),
     );
